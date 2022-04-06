@@ -33,7 +33,12 @@ public class Global {
 	 * @param t the task to be run
 	 */
 	public void changeRunning(Task t) {
-		history += t.name;
+		if(history.length() > 0 && history.charAt(history.length() - 1) == t.name){
+			history += "";
+		}
+		else {
+			history += t.name;
+		}
 	}
 	
 }
